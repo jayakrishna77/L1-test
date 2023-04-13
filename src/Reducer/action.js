@@ -1,7 +1,7 @@
 export function getTableData() {  
     return dispatch => {  
         return dispatch({  
-            type: 'GET_EMPLOYEE'  
+            type: 'GET_TABLEDATA'  
         });  
     }  
 }; 
@@ -9,7 +9,7 @@ export function getTableData() {
 export function addTableData(data) {  
     return dispatch => {  
         return dispatch({  
-            type: 'ADD_EMPLOYEE',  
+            type: 'ADD_TABLEDATA',  
             payload: data  
         });  
     }  
@@ -19,7 +19,7 @@ export function editTableData(data) {
     console.log(data)
     return dispatch => {  
         return dispatch({  
-            type: 'EDIT_EMPLOYEE',  
+            type: 'EDIT_TABLEDATA',  
             payload: data  
         });  
     }  

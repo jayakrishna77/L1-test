@@ -8,16 +8,16 @@ const initialstate = {
 
 const reducer = (state = initialstate, action) => {
   switch (action.type) {
-    case "GET_EMPLOYEE":
+    case "GET_TABLEDATA":
       return {
         ...state,
       };
-    case "ADD_EMPLOYEE":
+    case "ADD_TABLEDATA":
       return {
         ...state,
         cities: state.cities.concat(action.payload),
       };
-    case "EDIT_EMPLOYEE":
+    case "EDIT_TABLEDATA":
       return {
         ...state,
         cities: state.cities.map((content, i) =>
@@ -30,11 +30,6 @@ const reducer = (state = initialstate, action) => {
               }
             : content
         ),
-      };
-    case "DELETE_EMPLOYEE":
-      return {
-        ...state,
-        cities: state.cities.filter((item) => item.id !== action.payload),
       };
     default:
       return state;
